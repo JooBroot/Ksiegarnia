@@ -10,40 +10,43 @@
     <div id="app">
         <h1>Book Tracker</h1>
         <div id="loginSection">
-    <h2>Zaloguj się</h2>
-    <div class="form-container">
-        <div class="input-container">
-            <label for="loginUsername">Nazwa użytkownika:</label>
-            <input type="text" id="loginUsername">
+            <h2>Zaloguj się</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <div class="input-container">
+                        <label for="loginUsername">Nazwa użytkownika:</label>
+                        <input type="text" id="loginUsername">
+                    </div>
+                    <div class="input-container">
+                        <label for="loginPassword">Hasło:</label>
+                        <input type="password" id="loginPassword">
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <a href="#" class="btn" onclick="login()">Zaloguj</a>
+                    <button onclick="showRegister()">Zarejestruj się</button>
+                </div>
+            </div>
         </div>
-        <div class="input-container">
-            <label for="loginPassword">Hasło:</label>
-            <input type="password" id="loginPassword">
+        <div id="registerSection" style="display:none;">
+            <h2>Zarejestruj się</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <div class="input-container">
+                        <label for="registerUsername">Nazwa użytkownika:</label>
+                        <input type="text" id="registerUsername">
+                    </div>
+                    <div class="input-container">
+                        <label for="registerPassword">Hasło:</label>
+                        <input type="password" id="registerPassword">
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <button onclick="register()">Zarejestruj</button>
+                    <button onclick="showLogin()">Wróć do logowania</button>
+                </div>
+            </div>
         </div>
-        <div class="buttons-container">
-            <a href="#" class="btn" onclick="login()">Zaloguj</a>
-            <a href="#" class="btn" onclick="showRegister()">Zarejestruj się</a>
-        </div>
-    </div>
-</div>
-<div id="registerSection" style="display:none;">
-    <h2>Zarejestruj się</h2>
-    <div class="form-container">
-        <div class="input-container">
-            <label for="registerUsername">Nazwa użytkownika:</label>
-            <input type="text" id="registerUsername">
-        </div>
-        <div class="input-container">
-            <label for="registerPassword">Hasło:</label>
-            <input type="password" id="registerPassword">
-        </div>
-        <div class="buttons-container">
-            <button onclick="register()">Zarejestruj</button>
-            <button onclick="showLogin()">Wróć do logowania</button>
-        </div>
-    </div>
-</div>
-
         <div id="adminSection" style="display:none;">
             <h2>Admin Panel</h2>
             <div>
@@ -64,9 +67,8 @@
             </ul>
             <button onclick="logout()">Wyloguj</button>
         </div>
-        <a href="#" class="btn" onclick="showAdmin()">Panel administratora</a>
+        <button onclick="showAdmin()">Panel administratora</button>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
-
