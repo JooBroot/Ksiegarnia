@@ -12,18 +12,18 @@
         <div id="loginSection">
             <h2>Zaloguj się</h2>
             <div class="form-container">
-                <div class="input-group">
-                    <div class="input-container">
-                        <label for="loginUsername">Nazwa użytkownika:</label>
-                        <input type="text" id="loginUsername">
-                    </div>
-                    <div class="input-container">
-                        <label for="loginPassword">Hasło:</label>
-                        <input type="password" id="loginPassword">
-                    </div>
+                <div class="input-container">
+                    <label for="loginUsername">Nazwa użytkownika:</label>
+                    <input type="text" id="loginUsername">
                 </div>
-                <div class="buttons-container">
+                <div class="button-container">
                     <a href="#" class="btn" onclick="login()">Zaloguj</a>
+                </div>
+                <div class="input-container">
+                    <label for="loginPassword">Hasło:</label>
+                    <input type="password" id="loginPassword">
+                </div>
+                <div class="button-container">
                     <button onclick="showRegister()">Zarejestruj się</button>
                 </div>
             </div>
@@ -31,18 +31,18 @@
         <div id="registerSection" style="display:none;">
             <h2>Zarejestruj się</h2>
             <div class="form-container">
-                <div class="input-group">
-                    <div class="input-container">
-                        <label for="registerUsername">Nazwa użytkownika:</label>
-                        <input type="text" id="registerUsername">
-                    </div>
-                    <div class="input-container">
-                        <label for="registerPassword">Hasło:</label>
-                        <input type="password" id="registerPassword">
-                    </div>
+                <div class="input-container">
+                    <label for="registerUsername">Nazwa użytkownika:</label>
+                    <input type="text" id="registerUsername">
                 </div>
-                <div class="buttons-container">
+                <div class="button-container">
                     <button onclick="register()">Zarejestruj</button>
+                </div>
+                <div class="input-container">
+                    <label for="registerPassword">Hasło:</label>
+                    <input type="password" id="registerPassword">
+                </div>
+                <div class="button-container">
                     <button onclick="showLogin()">Wróć do logowania</button>
                 </div>
             </div>
