@@ -105,4 +105,29 @@ th {
     margin-top: 20px;
 }
 
+.input-container {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.buttons-container {
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.buttons-container .btn, .buttons-container button {
+    margin-left: 10px;
+}
+
+.form-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
