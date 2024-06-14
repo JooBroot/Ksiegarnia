@@ -105,29 +105,35 @@ th {
     margin-top: 20px;
 }
 
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .input-container {
     width: 50%;
-    float: left;
     box-sizing: border-box;
+    padding-right: 10px;
 }
 
-.buttons-container {
+.button-container {
     width: 50%;
-    float: left;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     box-sizing: border-box;
 }
 
-.buttons-container .btn, .buttons-container button {
-    margin-left: 10px;
+.input-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-.form-container::after {
-    content: "";
-    display: table;
-    clear: both;
+.button-container .btn, .button-container button {
+    width: 100%;
+    margin-bottom: 10px;
 }
-
 
