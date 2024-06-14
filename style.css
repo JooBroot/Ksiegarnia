@@ -118,11 +118,13 @@ th {
     box-sizing: border-box;
 }
 .div1{
+    background-color: light-coral;
     width: 50%
     float: left;
 }
 
-.div2{
-    width: 40%
+.gowno{
+    background-color: goldenrod;
+    width: 50%
     float: right;
 }
