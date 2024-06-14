@@ -118,13 +118,11 @@ th {
     box-sizing: border-box;
 }
 .div1{
-    background-color: #7633FF;
     width: 50%;
     float: left;
 }
 
-.gowno{
-    background-color: goldenrod;
+.div2{
     width: 50%;
     float: right;
 }
