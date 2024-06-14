@@ -117,3 +117,11 @@ th {
     margin-bottom: 10px;
     box-sizing: border-box;
 }
+.div1{
+    width: 50%
+}
+
+.div2{
+    width: 50%
+    float: right;
+}
