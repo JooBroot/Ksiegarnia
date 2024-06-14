@@ -118,6 +118,7 @@ th {
     box-sizing: border-box;
 }
 .div1{
+    background-color: #fff;
     width: 50%;
     float: left;
 }
