@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,54 +16,61 @@
         <canvas id="genreChart"></canvas>
     </div>
     <script>
-        function goBack() {
+        function goBack()
+	{
             window.location.href = 'library.html';
         }
 
-        function renderChart(data) {
+        function renderChart(data)
+	{
             const ctx = document.getElementById('genreChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
+            new Chart(ctx,
+	    {
+                type: 'pie',
+                data:
+		{
                     labels: Object.keys(data),
-                    datasets: [{
-                        label: 'Ilość książek',
+                    datasets:
+		    [{
                         data: Object.values(data),
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
+                        backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange']
                     }]
-                },
-                options: {
+              	},
+                options:
+		{
                     responsive: true,
                     maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
                 }
             });
         }
 
-        window.onload = function() {
+        window.onload = function()
+	{
             const storedUser = JSON.parse(localStorage.getItem('currentUser'));
-            if (storedUser) {
+            if (storedUser)
+	    {
                 document.getElementById('username').textContent = `Nazwa użytkownika: ${storedUser.username}`;
                 const genreCount = {};
-                storedUser.books.forEach(book => {
-                    if (genreCount[book.genre]) {
+                storedUser.books.forEach(book =>
+		{
+                    if (genreCount[book.genre] > 0)
+		    {
                         genreCount[book.genre]++;
-                    } else {
+			console.log(genreCount);
+                    }
+	 	    else
+		    {
                         genreCount[book.genre] = 1;
+			console.log(genreCount);
                     }
                 });
                 renderChart(genreCount);
-            } else {
+            }
+	    else
+	    {
                 window.location.href = 'index.html';
             }
         }
     </script>
 </body>
 </html>
-
