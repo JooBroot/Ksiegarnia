@@ -114,7 +114,7 @@ function updateAdminUserList() {
 }
 
 // Inicjalizacja książek po załadowaniu strony biblioteki
-window.onload = function() {
+window.onload = function () {
     const storedUser = JSON.parse(localStorage.getItem('currentUser'));
     if (storedUser) {
         currentUser = storedUser;
@@ -185,22 +185,56 @@ function updateTable() {
     const tbody = document.querySelector('#bookTable tbody');
     tbody.innerHTML = '';
     currentUser.books.forEach(book => {
-        const percentRead = book.totalPages ? ((book.pagesRead / book.totalPages) * 100).toFixed(2) + '%' : '0%';
+        const percentRead = book.totalPages ? ((book.pagesRead / book.totalPages) * 100).toFixed(2) : 0;
         const row = document.createElement('tr');
+
+        // Dodaj pasek postępu jako nową komórkę w wierszu
+        const progressCell = document.createElement('td');
+        const progress = document.createElement('progress');
+        progress.setAttribute('value', percentRead);
+        progress.setAttribute('max', '100');
+
+        // Dodaj obsługę zdarzenia mouseover
+        row.addEventListener('mouseover', function () {
+            progress.setAttribute('title', `${percentRead}%`);
+        });
+
+        // Dodaj obsługę zdarzenia mouseout
+        row.addEventListener('mouseout', function () {
+            progress.removeAttribute('title');
+        });
+
+        progressCell.appendChild(progress);
         row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.genre}</td>
             <td>${book.totalPages}</td>
             <td>${book.pagesRead}</td>
-            <td>${percentRead}</td>
         `;
+        row.appendChild(progressCell);
         tbody.appendChild(row);
     });
     localStorage.setItem('users', JSON.stringify(users));
 }
 
+
 // Pokaż szczegóły użytkownika
 function showDetails() {
     window.location.href = 'details.html';
 }
+
+// Pobierz nagłówek
+var header = document.querySelector('header');
+
+// Śledź przewijanie strony
+window.addEventListener('scroll', function () {
+    // Jeśli przewinięcie strony jest większe niż 50px
+    if (window.scrollY > 50) {
+        // Dodaj klasę "small" do nagłówka
+        header.classList.add('small');
+    } else {
+        // W przeciwnym razie usuń klasę "small"
+        header.classList.remove('small');
+    }
+});

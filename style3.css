@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ff3333;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 200px;
+    width: 90%;
+    max-width: 1300px;
+    height: 600px;
+}
+
+#app {
+    display: flex;
+    justify-content: space-between;
+    background-color: #CFCFCF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    gap: 20px;
+}
+
+#bookForm, #bookTableContainer {
+    width: 48%;
+
+}
+
+#bookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#logoImage {
+    width: 50px;
+    height: auto;
+    margin-right: 500px;
+}
+
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+.centered-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    background-color: #FF3359;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #e62e50;
+    }
+
+#logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header.small {
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 3px solid #808080;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#logoutButton {
+    position: absolute;
+    top: 0px;
+    right: 20px;        
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #ff3333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+}

@@ -1,19 +1,43 @@
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    background-color: #f0f0f0;
+    height: 140vh;
+    background-color: #f5f5dc;
+    flex-direction: column;
 }
+
+header {
+    background-color: #ff3333;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+
+    header.small {
+        padding: 15px 0;
+        font-size: 15px;
+    }
+
 #app {
     background: white;
     padding: 20px;
+    margin-top: 150px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 700px;
+    height: 650px;
     width: 700px;
     max-width: 700px;
     display: flex;
@@ -31,8 +55,23 @@ button {
 }
 
 canvas#genreChart {
-    max-width: 500px; /* maksymalna szerokość wykresu */
-    width: 100%; /* szerokość wykresu */
-    height: 100%; /* stała wysokość wykresu */
-    margin-top: 10px; /* margines na górze */
+    max-width: 400px; /* maksymalna szerokość wykresu */
+    width: 90%; /* szerokość wykresu */
+    height: 90%; /* stała wysokość wykresu */
+    margin-top: 1   px; /* margines na górze */
+}
+
+
+#logoutButton {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #ff3333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
 }
